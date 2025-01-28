@@ -1,0 +1,37 @@
+import express from 'express'
+import cors from 'cors'
+import apiRoutes from './routes/apiRoutes.js';
+import errorHandler from './middlewares/errorHandlers.js';
+
+
+
+class App {
+    constructor() {
+        this.app = express();
+        this.middlewares();
+        this.routes();
+        this.errorHandler();
+    }
+
+    middlewares() {
+        this.app.use(cors());
+        this.app.use(express.json());
+    }
+
+    routes() {
+        this.app.use("/api", apiRoutes);
+        this.app.use("/another", apiRoutes);
+    }
+
+    errorHandler() {
+        this.app.use(errorHandler);
+    }
+
+    getServer() {
+        return this.app;
+    }
+}
+
+
+
+export default new App().getServer()
