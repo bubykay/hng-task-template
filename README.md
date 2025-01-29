@@ -31,6 +31,7 @@ The API is built using **Node.js** with **Express.js** and follows best practice
   "github_url": "https://github.com/yourusername/your-repo"
 }
 ```
+- **SwaggerDoc Link:** [https://hng-week1-riea.onrender.com/api-docs/#/default/get_api_info](https://hng-week1-riea.onrender.com/api-docs/#/default/get_api_info)
 
 ## Getting Started
 ### Prerequisites
