@@ -2,6 +2,8 @@ import express from 'express'
 import cors from 'cors'
 import apiRoutes from './routes/apiRoutes.js';
 import errorHandler from './middlewares/errorHandlers.js';
+import swaggerUi from 'swagger-ui-express';
+import swaggerSpec from './utils/swaggerConfig.js';
 
 
 
@@ -20,7 +22,7 @@ class App {
 
     routes() {
         this.app.use("/api", apiRoutes);
-        this.app.use("/another", apiRoutes);
+        this.app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
     }
 
     errorHandler() {

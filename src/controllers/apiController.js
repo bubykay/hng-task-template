@@ -5,7 +5,7 @@ class APIController {
         res.json({
             email: config.email,
             current_datetime: new Date().toISOString(),
-            github_url: config.githubUrl
+            github_url: config.githubUrl,
         });
     }
 }
