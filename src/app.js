@@ -4,6 +4,7 @@ import apiRoutes from './routes/apiRoutes.js';
 import errorHandler from './middlewares/errorHandlers.js';
 import swaggerUi from 'swagger-ui-express';
 import swaggerSpec from './utils/swaggerConfig.js';
+import responseMiddleware from './middlewares/responseMiddleware.js';
 
 
 
@@ -18,6 +19,7 @@ class App {
     middlewares() {
         this.app.use(cors());
         this.app.use(express.json());
+        this.app.use(responseMiddleware)
     }
 
     routes() {
@@ -27,6 +29,7 @@ class App {
 
     errorHandler() {
         this.app.use(errorHandler);
+        
     }
 
     getServer() {
