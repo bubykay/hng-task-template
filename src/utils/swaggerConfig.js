@@ -6,7 +6,7 @@ const options = {
   definition: {
     openapi: "3.0.0",
     info: {
-      title: "HNG Internship API Documentation - Task 1",
+      title: "Title of Task 1",
       version: "1.0.0",
       description: "API documentation for Task 1 project",
     },

@@ -1,7 +1,7 @@
 {
-  "name": "hng-tasks-template",
+  "name": "task-name-here",
   "version": "1.0.0",
-  "description": "HNG Weekly task",
+  "description": "Description of the task here",
   "main": "index.js",
   "type": "module",
   "repository": "git@github.com:bubykay/hng-tasks-template.git",
